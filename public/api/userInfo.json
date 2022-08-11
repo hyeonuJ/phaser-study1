@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "Id": 1,
+      "email": "hw020123@naver.com",
+      "name": "정현우",
+      "password": "Qq98933096@",
+      "bday": 20020123
+    },
+    {
+      "Id": 2,
+      "email": "hw020@naver.com",
+      "name": "현우정",
+      "password": "1234",
+      "bday": 20020123
+    }
+  ]
+}
