@@ -34,8 +34,6 @@ export default class LevelFinishedScene extends Phaser.Scene {
         this.sound.play("click");
         this.scene.start("game", { level: data.currentLevel });
       });
-
-    if (data.currentLevel + 1 > Levels.levelsCount) return;
     this.add
       .dom(width * 0.5, height * 0.72, "button", "width:200px", "Next Level")
       .setClassName("button is-primary is-medium")

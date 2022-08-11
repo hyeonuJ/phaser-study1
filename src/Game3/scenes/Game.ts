@@ -93,6 +93,20 @@ export default class Game extends Phaser.Scene {
       fontFamily: "Poppins",
     });
 
+    // 재시작 버튼
+    this.add
+      .dom(
+        this.scale.width * 0.9,
+        this.scale.height * 0.9,
+        "button",
+        "",
+        "restart"
+      )
+      .addListener("click")
+      .once("click", () => {
+        this.scene.start("game", { level: this.currentLevel });
+      });
+
     // 이거 없으면 다음 스테이지로 진행 불가
     this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
       this.cache.tilemap.remove("tilemap");
@@ -282,7 +296,7 @@ export default class Game extends Phaser.Scene {
     if (!this.layer) return undefined;
     const tile = this.layer.getTileAtWorldXY(x, y);
     if (!tile) return false;
-    return tile.index === 100;
+    return tile.index === 101;
   }
 
   private hasTargetAt(x: number, y: number, tileIndex: number) {
